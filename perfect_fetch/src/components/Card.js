@@ -3,53 +3,43 @@ import React from 'react';
 import Image from './Image';
 import ImageInfo from './ImageInfo';
 
-const axios = require('axios');
 
 
 class Card extends React.Component{
 
     state={
-        dogImage: null,
-        imageFetched: false
+        imageFetched: true
     }
 
-    async componentDidMount(){
-        await axios.get(`https://dog.ceo/api/breed/${this.props.randomDog}/images/random`)
-        .then((response)=> {
-            this.setState({dogImage: response.data.message, imageFetched: true});
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
-    }
-
-
-
+    //call parent function addDogs and increasePawPrints
     updateRoundAndImage = () => {
-        this.props.updateRound();
+        //remove dog breed from image string to be added to parent state object
+        const breed = this.props.currentDog
+        .split('/')[4]
+        .split(' ')
+        .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+        .join(' ');
+
+        //pass fixed string to parent function
+        this.props.addDogs(breed);
+        this.props.increasePawPrints();
     }
 
-
-
-    renderImage = () =>{
-        if(this.state.imageFetched){
-            return(
-                <div>
-                <Image dogImage={this.state.dogImage} />
-                <ImageInfo dogImage ={this.state.dogImage} />
-                </div>
-                )
-        }else{
-            return null
-        }
+    //call parent function, does not increment current round or add dog to parent state array
+    didNotLike = () => {
+        this.props.didNotLikeDog();
     }
+
 
     render(){
         return(
             <div>
-                {this.renderImage()}
+                <div>
+                    <Image currentDog={this.props.currentDog} />
+                    <ImageInfo currentDog ={this.props.currentDog} />
+                </div>
                  <div>
-                    <button>
+                    <button onClick={this.didNotLike}>
                         <i className="far fa-times-circle fa-2x"></i>
                     </button>
                     <button onClick={this.updateRoundAndImage}>

@@ -4,7 +4,7 @@ import '../styles/Image.css'
 
 const ImageInfo = (props) =>{
 
-    const breed = props.dogImage
+    const breed = props.currentDog
         .split('/')[4]
         .split(' ')
         .map((s) => s.charAt(0).toUpperCase() + s.substring(1))

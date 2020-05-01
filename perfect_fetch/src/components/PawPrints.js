@@ -4,9 +4,9 @@ import React from 'react';
 class PawPrints extends React.Component{
 
 
-    //Creates array of size of current round, must fill array with any value to map pawprint
+    //Creates array of size of number of like the user has made this round, must fill array with any value to map pawprint
     renderPrints = () => {
-        const arr = new Array(this.props.currentRound).fill('i')
+        const arr = new Array(this.props.numPawPrints).fill('i')
         return arr.map((item, i) =>{
             return <i className="fas fa-paw" key={i.toString()}/>
         })
