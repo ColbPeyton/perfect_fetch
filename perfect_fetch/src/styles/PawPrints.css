@@ -1,26 +1,3 @@
-.Image-Container{
-    width: 275px;
-    height: 50%;
-    /* margin:  0 auto; */
-    /* position: relative; */
-    object-fit: contain;
-
-}
-
-.Image-DogImage{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: 100%;
-    height: 325px;
-    /* margin:  0 auto;     */
-    /* display: block; */
-
-    /* position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%); */
-}
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 //renders pawprints to screen based on the current round amount prop from App.js
 class PawPrints extends React.Component{
 

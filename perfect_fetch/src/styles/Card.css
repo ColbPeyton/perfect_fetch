@@ -1,24 +1,40 @@
-.Image-Container{
-    width: 275px;
-    height: 50%;
-    /* margin:  0 auto; */
-    /* position: relative; */
-    object-fit: contain;
+.Card-Container{
+    width: 100%;
+    height: 50vh;
+    background-color: #80A1D4;
+    position: relative;
+    border-radius: 15px;
+    border: 4px solid #3A506B;
+    margin: 0 auto;
+}
+
+.Card-Content{
+    width: 100%;
 
 }
 
-.Image-DogImage{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: 100%;
+.Card-Content-Image{
+    margin-bottom: 0;
+    width: 275px;
     height: 325px;
-    /* margin:  0 auto;     */
-    /* display: block; */
 
-    /* position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%); */
+}
+
+.Card-Content-Info{
+    border-top: 5px solid #80A1D4;
+    background-color: #F7AEF8;
+    width: 100%;
+    height: 9vh;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+.Card-Button-Container{
+
+}
+
+.Card-Buttons{
+
 }
 
 /* Extra small devices (phones, 600px and down) */

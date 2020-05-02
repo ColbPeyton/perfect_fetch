@@ -1,24 +1,11 @@
-.Image-Container{
-    width: 275px;
-    height: 50%;
-    /* margin:  0 auto; */
-    /* position: relative; */
-    object-fit: contain;
-
+.ImageInfo-Container{
+    padding: 1em;
 }
 
-.Image-DogImage{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: 100%;
-    height: 325px;
-    /* margin:  0 auto;     */
-    /* display: block; */
-
-    /* position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%); */
+.ImageInfo-Content{
+color: #2B2D42;
+font-weight: 700;
+font-size: 22px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -43,5 +30,5 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+
 }

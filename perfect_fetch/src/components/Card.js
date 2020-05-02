@@ -3,7 +3,7 @@ import React from 'react';
 import Image from './Image';
 import ImageInfo from './ImageInfo';
 
-
+import '../styles/Card.css';
 
 class Card extends React.Component{
 
@@ -33,16 +33,24 @@ class Card extends React.Component{
 
     render(){
         return(
-            <div>
-                <div>
-                    <Image currentDog={this.props.currentDog} />
-                    <ImageInfo currentDog ={this.props.currentDog} />
+            <div className="Card-Container">
+                <div className="Card-Content">
+                    <div className="Card-Content-Image">
+                        <Image currentDog={this.props.currentDog} />
+                    </div>
+                    <div className="Card-Content-Info">
+                        <ImageInfo currentDog ={this.props.currentDog} />
+                    </div>
                 </div>
-                 <div>
-                    <button onClick={this.didNotLike}>
+                 <div className="Card-Button-Container">
+                    <button 
+                        className="Card-Button"
+                        onClick={this.didNotLike}>
                         <i className="far fa-times-circle fa-2x"></i>
                     </button>
-                    <button onClick={this.updateRoundAndImage}>
+                    <button 
+                        className="Card-Button"
+                        onClick={this.updateRoundAndImage}>
                         <i className="far fa-check-circle fa-2x"></i>
                     </button>
             </div>

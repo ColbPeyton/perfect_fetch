@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Image.css'
 
+import '../styles/ImageInfo.css';
 
 const ImageInfo = (props) =>{
 
@@ -13,7 +14,7 @@ const ImageInfo = (props) =>{
     return(
 
         <div className="ImageInfo-Container">
-            <p>{breed}</p>
+            <p className="ImageInfo-Content">{breed}</p>
         </div>
 
     )
