@@ -1,4 +1,7 @@
 .Card-Container{
+    animation-name: fade;
+    animation-duration: 0.50s;
+    animation-fill-mode: forwards;
     width: 100%;
     height: 50vh;
     background-color: #80A1D4;
@@ -7,6 +10,7 @@
     border: 4px solid #3A506B;
     margin: 0 auto;
 }
+
 
 .Card-Content{
     width: 100%;
@@ -21,7 +25,7 @@
 }
 
 .Card-Content-Info{
-    border-top: 5px solid #80A1D4;
+    border-top: 5px solid #3A506B;
     background-color: #F7AEF8;
     width: 100%;
     height: 9vh;
@@ -30,12 +34,39 @@
 }
 
 .Card-Button-Container{
-
+    margin: 0 auto;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 95%;
 }
 
-.Card-Buttons{
+.Card-Button{
+    width: 50%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.Card-Button-Left{
+    background-color: rgb(245, 22, 108);
+    border-bottom-left-radius: 10px;
+    border: #3A506B solid 2px;
+    border-top: none;
+    border-right: #3A506B solid 1px;
+    cursor: pointer;
+
 
 }
+.Card-Button-Right{
+    background-color: #29ab87;
+    border-bottom-right-radius: 10px;
+    border: #3A506B solid 2px;
+    border-top: none;
+    border-left: #3A506B solid 1px;
+    cursor: pointer;
+}
+
+button:focus { outline:0 !important; }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

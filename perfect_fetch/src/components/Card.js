@@ -8,7 +8,7 @@ import '../styles/Card.css';
 class Card extends React.Component{
 
     state={
-        imageFetched: true
+        imageFetched: true,
     }
 
     //call parent function addDogs and increasePawPrints
@@ -42,18 +42,6 @@ class Card extends React.Component{
                         <ImageInfo currentDog ={this.props.currentDog} />
                     </div>
                 </div>
-                 <div className="Card-Button-Container">
-                    <button 
-                        className="Card-Button"
-                        onClick={this.didNotLike}>
-                        <i className="far fa-times-circle fa-2x"></i>
-                    </button>
-                    <button 
-                        className="Card-Button"
-                        onClick={this.updateRoundAndImage}>
-                        <i className="far fa-check-circle fa-2x"></i>
-                    </button>
-            </div>
             </div>
         )
     }

@@ -1,0 +1,81 @@
+
+.WelcomeScreen-Container{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.WelcomeScreen-Container h1{
+    margin-top: 5vh;
+    font-size: 45px;
+    padding: 0 1em;
+    color: #2B2D42;
+}
+
+.WelcomeScreen-Content{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 45%;
+    color: #2B2D42;
+}
+
+.WelcomeScreen-Content p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.WelcomeScreen-Button-Div{
+    display: flex;
+    justify-content: center;
+}
+
+.WelcomeScreen-Button-GetStarted{
+    background-color: #80A1D4;
+    border: none;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+    color: #2B2D42;
+}
+
+.WelcomeScreen-Button-Rules{
+    background-color: #F7AEF8;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    bottom: 2%;
+    cursor: pointer;
+    right: 5%;
+    color: #2B2D42;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}

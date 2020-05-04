@@ -1,34 +1,15 @@
-
-.PawPrints-Container{
-    animation-name: fade;
-    animation-duration: 0.50s;
+.RoundMarker-Container{
+    animation: slideRightRound;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
-    width: 100%;
-    margin-top: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(43, 45, 66, 0.822);
-    border: #3A506B solid 2px;
-    border-radius: 5px;
-    height: 7vh;
-}
-
-.PawPrints-Icons-Blue{
-    color: #80A1D4;
-}
-
-.PawPrints-Icons-Blue-Outline{
-    color: rgba(128, 162, 212, 0.5);
-}
-
-.PawPrints-Icons-Red{
-    color: #F7AEF8;
-    
-}
-
-.PawPrints-Icons-Red-Outline{
-    color: hsla(299, 84%, 83%, 0.500);
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    background-color: pink;
+    width: 50%;
+    height: auto;
+    position: absolute;
 }
 
 
@@ -54,5 +35,26 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    
+}
+
+
+@keyframes slideRightRound{
+    0%{
+        left: -1000px
+    }
+    40%{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    50%{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    100%{
+        left: 1000px;
+    }
     
 }

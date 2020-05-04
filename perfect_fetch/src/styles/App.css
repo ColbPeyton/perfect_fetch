@@ -14,6 +14,64 @@
     margin-top: 15vh;
 }
 
+.App-Child-Div-Left{
+    animation-name: slideLeft;
+    animation-duration: 0.50s;
+    animation-fill-mode: forwards;
+}
+
+.App-Child-Div-Right{
+    animation-name: slideRight;
+    animation-duration: 0.50s;
+    animation-fill-mode: forwards;
+}
+
+.App-Button-Container{
+    animation-name: fade;
+    animation-duration: 0.50s;
+    animation-fill-mode: forwards;
+    margin: 0 auto;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.App-Button{
+    width: 50%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #2B2D42;
+
+}
+
+.App-Button-Left{
+    background-color: rgb(245, 22, 108);
+    border-top-left-radius: 10px;
+    border: #3A506B solid 2px;
+    border-bottom: none;
+    border-right: none;
+    cursor: pointer;
+
+
+}
+.App-Button-Right{
+    background-color: #29ab87;
+    border-top-right-radius: 10px;
+    border: #3A506B solid 2px;
+    border-bottom: none;
+    border-left: none;
+    cursor: pointer;
+}
+
+button:focus { outline:0 !important; }
+
+button:disabled{
+    color: #2B2D42;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -45,3 +103,53 @@ FFFFFF
 80A1D4
 FFA69E
 DB5461 */
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideDown {
+    0% {
+        top: -1000px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -1000px;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    100%{
+        left: -1000px
+    }
+}
+
+@keyframes slideRight{
+    0%{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    100%{
+        right: -1000px
+    }
+}
