@@ -6,6 +6,7 @@ import '../styles/Image.css';
 
 const Image = (props) =>{
 
+    
     const breed = props.currentDog
         .split('/')[4]
         .split(' ')

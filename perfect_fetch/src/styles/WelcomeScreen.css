@@ -6,23 +6,48 @@
 }
 
 .WelcomeScreen-Container h1{
-    margin-top: 5vh;
-    font-size: 45px;
-    padding: 0 1em;
-    color: #2B2D42;
+    margin-top: 4.5vh;
+    font-size: 55px;
+    color: #474350;
+    line-height: 1.25em;
 }
 
 .WelcomeScreen-Content{
     width: 75%;
     margin: 0 auto;
-    margin-top: 45%;
-    color: #2B2D42;
+    margin-top: 75%;
+    /* color: #474350;
+    background-color: #92B4F4 ;
+    border-radius: 10px; */
+    /* border: #3A506B 5px solid; */
 }
 
-.WelcomeScreen-Content p{
-    font-size: 20px;
+.WelcomeScreen-Content-Image{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.65;
+}
+
+.WelcomeScreen-Content-Instructions{
+    border-radius: 10px;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.25em;
+    padding: 10px 20px;
+}
+
+.WelcomeScreen-Content-Header{
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 35px;
+    padding: 5px;
+    font-weight: 600;
+    background-color: #F6BD60;
+    /* border-bottom: #3A506B 4px solid; */
+
 }
 
 .WelcomeScreen-Button-Div{
@@ -31,7 +56,7 @@
 }
 
 .WelcomeScreen-Button-GetStarted{
-    background-color: #80A1D4;
+    background-color: #F6BD60;
     border: none;
     font-size: 25px;
     border-radius: 5px;
@@ -39,21 +64,35 @@
     position: absolute;
     bottom: 10%;
     cursor: pointer;
-    color: #2B2D42;
+    color: #474350;
+    font-weight: 700;
 }
 
 .WelcomeScreen-Button-Rules{
-    background-color: #F7AEF8;
+    background-color: #78E0DC;
     border: none;
-    font-size: 20px;
     border-radius: 10px;
     padding: 5px;
     position: absolute;
-    bottom: 2%;
+    bottom: 1%;
     cursor: pointer;
-    right: 5%;
-    color: #2B2D42;
+    right: 3%;
+    width: 10%;
 }
+
+.WelcomeScreen-Logo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 9.5vh;
+    margin: auto;
+    width: 100%;
+}
+
+.WelcomeScreen-Button-Img{
+    width: 100%;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -79,3 +118,15 @@
 @media only screen and (min-width: 1200px) {
     
 }
+
+/* 
+#F6BD60
+
+#F7EDE2
+
+#78E0DC
+
+#92B4F4
+
+#474350 
+*/

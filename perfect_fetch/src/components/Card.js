@@ -8,7 +8,11 @@ import '../styles/Card.css';
 class Card extends React.Component{
 
     state={
-        imageFetched: true,
+        imageFetched: null,
+    }
+
+    componentDidMount(){
+        this.setState({imageFetched: this.props.currentDog})
     }
 
     //call parent function addDogs and increasePawPrints

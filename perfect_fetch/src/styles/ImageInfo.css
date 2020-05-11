@@ -3,10 +3,22 @@
 }
 
 .ImageInfo-Content{
-color: #2B2D42;
+color: #474350;
 font-weight: 700;
 font-size: 22px;
 }
+
+/* @media only screen and (max-width: 600px) , (max-height: 750px) {
+    .ImageInfo-Container{
+        padding: 1em;
+    }
+    
+    .ImageInfo-Content{
+    color: #474350;
+    font-size: 20px;
+    }
+    
+} */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

@@ -12,6 +12,9 @@
 
 .App-Child-Div{
     margin-top: 15vh;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .App-Child-Div-Left{
@@ -41,36 +44,64 @@
 
 .App-Button{
     width: 50%;
-    padding-top: 2px;
+    padding-top: 4px;
     padding-bottom: 2px;
-    color: #2B2D42;
+    color: #474350;
 
 }
 
 .App-Button-Left{
-    background-color: rgb(245, 22, 108);
+    color: #474350;
+    background-color: #F6BD60;
     border-top-left-radius: 10px;
-    border: #3A506B solid 2px;
+    border: #3A506B solid 3.25px;
     border-bottom: none;
     border-right: none;
     cursor: pointer;
-
+    padding: 6px;
 
 }
 .App-Button-Right{
-    background-color: #29ab87;
+    color: #474350;
+    background-color: #92B4F4;
     border-top-right-radius: 10px;
-    border: #3A506B solid 2px;
+    border: #3A506B solid 3.25px;
     border-bottom: none;
     border-left: none;
     cursor: pointer;
+    padding: 6px;
+
 }
 
 button:focus { outline:0 !important; }
 
 button:disabled{
-    color: #2B2D42;
+    color: #474350;
 }
+
+.App-Div-Logo{
+    
+}
+
+.App-Logo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    margin-bottom: 10%;
+    width: 85%;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* @media only screen and (max-width: 600px) , (max-height: 700) {
+    .App-Child-Div{
+        margin-top: 15vh;
+    }
+    
+} */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -98,9 +129,9 @@ button:disabled{
 }
 
 
-/* 2B2D42
+/* 474350
 FFFFFF
-80A1D4
+92B4F4
 FFA69E
 DB5461 */
 
@@ -153,3 +184,4 @@ DB5461 */
         right: -1000px
     }
 }
+

@@ -4,11 +4,11 @@
     animation-duration: 0.50s;
     animation-fill-mode: forwards;
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(43, 45, 66, 0.822);
+    background-color: rgba(43, 45, 66, 0.733);
     border: #3A506B solid 2px;
     border-radius: 5px;
     height: 7vh;
@@ -23,15 +23,30 @@
 }
 
 .PawPrints-Icons-Red{
-    color: #F7AEF8;
+    color: #FFA500;
     
 }
 
 .PawPrints-Icons-Red-Outline{
-    color: hsla(299, 84%, 83%, 0.500);
+    color: rgba(255, 166, 0, 0.5);
 }
 
 
+/* @media only screen and (max-width: 600px) , (max-height: 750) {
+
+    .PawPrints-Container{
+        width: 100%;
+        margin-top: 30vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(43, 45, 66, 0.822);
+        border: #3A506B solid 2px;
+        border-radius: 5px;
+        height: 7vh;
+    }
+
+} */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 

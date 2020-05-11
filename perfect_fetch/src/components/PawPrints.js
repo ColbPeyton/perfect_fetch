@@ -2,6 +2,9 @@ import React from 'react';
 
 import '../styles/PawPrints.css'
 
+// import pawPrintBlue from '../images/Paw Print A-03.png';
+// import pawPrintRed from '../images/Paw Print B-04.png';
+
 //renders pawprints to screen based on the current round amount prop from App.js
 class PawPrints extends React.Component{
 

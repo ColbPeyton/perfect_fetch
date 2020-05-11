@@ -6,10 +6,13 @@ import PawPrints from './PawPrints';
 import Rules from './Rules';
 import WelcomeScreen from './WelcomeScreen';
 import RoundMaker from './RoundMarker';
+import BetweenRoundScreen from './BetweenRoundScreen';
 
 
 import '../styles/App.css';
 import FavoriteScreen from './FavoriteScreen';
+
+import Logo from '../images/Perfect Fetch Logo-02.png';
 
 const axios = require('axios');
 
@@ -53,7 +56,8 @@ class App extends React.Component{
         startOfNewRound: true,
         isButtonDisabled: false,
         favoriteDog: null,
-        favoriteImage: null
+        favoriteImage: null,
+        favoriteScreenRendered: false
     }
 
     //generate first set of images on component load
@@ -124,9 +128,9 @@ class App extends React.Component{
         this.generateNewDog();
 
         if(this.state.numPawPrints >= 4){
-            setTimeout(()=>{
+            // setTimeout(()=>{
                 this.updateRound();
-            }, 1000)
+            // }, 100)
             
         }
     }
@@ -136,8 +140,11 @@ class App extends React.Component{
         let nextRound = this.state.currentRound + 1;
         this.setState({currentRound: nextRound, numPawPrints: 0, startOfNewRound: true})
 
-        if(this.state.currentRound >= 1){
-            this.determineFavorite();
+        if(this.state.currentRound >= 0){
+            this.setState({ favoriteScreenRendered: true})
+            setTimeout(()=> {
+                this.determineFavorite();
+            }, 500)
         }
     }
 
@@ -146,13 +153,14 @@ class App extends React.Component{
             return this.state.dogsChosen[a] > this.state.dogsChosen[b] ? a : b
         })
 
-        console.log(this.state.dogsChosen[favorite], favorite)
+        // console.log(this.state.dogsChosen[favorite], favorite)
         // if(this.state.dogsChosen[favorite] === 1){
-        //     this.setState({currentRound: 1})
+        //     this.setState({currentRound: 0})
         // }
-
+        if(this.state.currentRound >= 0){
         this.setState({favoriteDog: favorite});
         this.getFavoriteImage();
+        }
     }
 
 
@@ -184,7 +192,7 @@ class App extends React.Component{
         if(this.state.welcomeScreenRendered){
             return(
                 <div className="App-WelcomeScreen">
-                    <WelcomeScreen disableWelcomeScreen={this.disableWelcomeScreen} enable_disableRuleScreen={this.enable_disableRuleScreen}/>
+                    <WelcomeScreen Logo={Logo} disableWelcomeScreen={this.disableWelcomeScreen} enable_disableRuleScreen={this.enable_disableRuleScreen}/>
                 </div>
             )
         }
@@ -194,18 +202,18 @@ class App extends React.Component{
         const replaceDog = this.state.favoriteDog.replace('-','/').toLowerCase();
             await axios.get(`https://dog.ceo/api/breed/${replaceDog}/images/random`)
             .then((response)=>{
-                console.log(response)
-                this.setState({favoriteImage: response.data.message})
+                this.setState({favoriteImage: response.data.message});
+                // console.log(this.state.favoriteImage)
             })
             .catch(e => {
                 console.log(e);
             })
     }
     renderFavorite = () => {
-        if(this.state.favoriteDog){
+        if(this.state.favoriteDog && this.state.favoriteImage && !this.state.welcomeScreenRendered){
             return(
                 <div>
-                    <FavoriteScreen  favoriteImage={this.state.favoriteImage} favoriteDog={this.state.favoriteDog}/>
+                    <FavoriteScreen  startOver={this.startOver} favoriteImage={this.state.favoriteImage} favoriteDog={this.state.favoriteDog}/>
                 </div>
             )
         }
@@ -213,6 +221,14 @@ class App extends React.Component{
     }
 
 
+    renderBetweenScreen = () => {
+        if(this.state.favoriteScreenRendered){
+            return(
+                <BetweenRoundScreen favoriteScreenRendered={this.state.favoriteScreenRendered}/>
+            )
+        }
+        return null
+    }
 
 
 
@@ -266,11 +282,45 @@ class App extends React.Component{
     }
 
     renderRoundMaker(){
-        if(this.state.startOfNewRound && !this.state.welcomeScreenRendered){
+        if(this.state.startOfNewRound && !this.state.welcomeScreenRendered && !this.state.favoriteScreenRendered){
             return(
+                <div>
+                <BetweenRoundScreen />
                 <RoundMaker currentRound={this.state.currentRound}/>
+                </div>
             )
         }
+    }
+
+    startOver = () => {
+        this.setState({
+            arrOfDogImages: [],
+            numPawPrints: 0,            
+            currentPosInArr: 0,         
+            dogsChosen: {},             
+            currentDog: null,          
+            currentRound: 0,           
+            rulesRendered: false,
+            welcomeScreenRendered: true,
+            startOfNewRound: true,
+            isButtonDisabled: false,
+            favoriteDog: null,
+            favoriteImage: null,
+            favoriteScreenRendered: false
+        })
+        this.getDogImages(); 
+        // console.log(this.state.welcomeScreenRendered)
+    }
+
+    renderLogo = () =>{
+        if(!this.state.welcomeScreenRendered ){
+            return(
+                <div className="App-Div-Logo">
+                    <img className="App-Logo" src={Logo} alt="logo" />
+                </div>
+            )
+        }
+        return null
     }
 
 
@@ -279,12 +329,14 @@ class App extends React.Component{
     render(){
         return(
             <div className="App-Parent-Div">
+            {this.renderLogo()}
             <DelayedRules delayTime={500} isMounted={this.state.rulesRendered} />
             {this.renderWelcomeScreen()}
             {this.renderRoundMaker()}
             {this.renderCard()}
             {this.renderButtons()}
             {this.renderFavorite()}
+            {this.renderBetweenScreen()}
             </div>
         )
     }

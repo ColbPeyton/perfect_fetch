@@ -43,16 +43,18 @@ class Rules extends React.Component{
                 style={this.state.style}
                 >
                 <div className="Rules-Title">
-                    <h2>find the perfect dog for you</h2>
+                    <h2>Let's find the perfect dog for you</h2>
                 </div>
                 <div className="Rules-Content">
+                    <p className="Rules-Content-Steps">Steps to success:</p>
                     <ul className="Rules-Content-List">
-                        <li>Step 1</li>
-                        <li>Step 1</li>
-                        <li>Step 1</li>
-                        <li>Step 1</li>
-                        <li>Step 1</li>
+                        <li>5 rounds</li>
+                        <li>select 5 dogs per round</li>
+                        <li>we will determine your favorite</li>
+
+                        
                     </ul>
+                    <p className="Rules-li-final">All images are provided by DogAPI</p>
                 </div>
                 
             </div>
