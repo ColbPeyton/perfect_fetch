@@ -1,132 +1,418 @@
+@import './colors';
 
-.WelcomeScreen-Container{
-    height: 100%;
-    width: 100%;
-    text-align: center;
+
+.welcomeScreen{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    .container{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .header{
+            height: 30vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .content{
+            overflow: hidden;
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                max-width: 100%;
+                height: auto;
+                opacity: 0.75;
+
+            }
+        }
+
+        .button-start{
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                background-color: $primary-yellow;
+                border: none;
+                font-size: 1.5rem;
+                border-radius: 5px;
+                padding: 10px;
+                font-weight: 700;
+                transition: all 250ms;
+                &:hover{
+                    background-color: $secondary-yellow;
+                }
+            }
+        }
+
+        .button-rules{
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            button{
+                background-color: $primary-blue;
+                max-width: 50px;
+                max-height: 50px;
+                width: 15%;
+                height: 90%;
+                margin-right: 10px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 250ms;
+                    &:hover{
+                        background-color: $secondary-blue;
+                    }
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
 }
 
-.WelcomeScreen-Container h1{
-    margin-top: 4.5vh;
-    font-size: 55px;
-    color: #474350;
-    line-height: 1.25em;
-}
-
-.WelcomeScreen-Content{
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 75%;
-    /* color: #474350;
-    background-color: #92B4F4 ;
-    border-radius: 10px; */
-    /* border: #3A506B 5px solid; */
-}
-
-.WelcomeScreen-Content-Image{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    opacity: 0.65;
-}
-
-.WelcomeScreen-Content-Instructions{
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 1.25em;
-    padding: 10px 20px;
-}
-
-.WelcomeScreen-Content-Header{
-    border-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    font-size: 35px;
-    padding: 5px;
-    font-weight: 600;
-    background-color: #F6BD60;
-    /* border-bottom: #3A506B 4px solid; */
-
-}
-
-.WelcomeScreen-Button-Div{
-    display: flex;
-    justify-content: center;
-}
-
-.WelcomeScreen-Button-GetStarted{
-    background-color: #F6BD60;
-    border: none;
-    font-size: 25px;
-    border-radius: 5px;
-    padding: 10px;
-    position: absolute;
-    bottom: 10%;
-    cursor: pointer;
-    color: #474350;
-    font-weight: 700;
-}
-
-.WelcomeScreen-Button-Rules{
-    background-color: #78E0DC;
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    position: absolute;
-    bottom: 1%;
-    cursor: pointer;
-    right: 3%;
-    width: 10%;
-}
-
-.WelcomeScreen-Logo{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 9.5vh;
-    margin: auto;
-    width: 100%;
-}
-
-.WelcomeScreen-Button-Img{
-    width: 100%;
+@media screen and (min-width: 320px){
+   
 }
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
 
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 375px){
+    .welcomeScreen{
+        height: 100vh;
+        width: 100vw;
+        max-height: 750px;
+        .container{
+            width: 100%;
+            height: 100%;
+            .header{
+                height: 30vh;
+                max-height: 250px;
+                width: 100%;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
     
+            .content{
+                height: 50vh;
+                width: 100%;
+                min-height: 300px;
+                img{
+                    max-width: 100%;
+                    min-height: 300px;
+                    height: auto;
+                    opacity: 0.75;
+    
+                }
+            }
+    
+            .button-start{
+                width: 100%;
+                height: 10vh;
+                button{
+                    font-size: 1.75rem;
+                }
+            }
+    
+            .button-rules{
+                width: 100%;
+                height: 10vh;
+  
+                button{
+                    max-width: 50px;
+                    max-height: 50px;
+                    width: 15%;
+                    height: 95%;
+                    margin-right: 10px;
+                    border-radius: 10px;
+                    img{
+                        max-width: 90%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 480px){
+    .welcomeScreen{
+        height: 100vh;
+        width: 100vw;
+        max-height: 800px;
+        .container{
+            width: 100%;
+            height: 100%;
+            .header{
+                height: 30vh;
+                max-height: 300px;
+                width: 100%;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+    
+            .content{
+                height: 50vh;
+                width: 100%;
+                min-height: 350px;
+                img{
+                    max-width: 100%;
+                    min-height: 350px;
+                    height: auto;
+                    opacity: 0.75;
+    
+                }
+            }
+    
+            .button-start{
+                width: 100%;
+                height: 10vh;
+                button{
+                    font-size: 2rem;
+                }
+            }
+    
+            .button-rules{
+                width: 100%;
+                height: 10vh;
+  
+                button{
+                    max-width: 60px;
+                    max-height: 60px;
+                    width: 15%;
+                    height: 95%;
+                    margin-right: 15px;
+                    img{
+                        max-width: 90%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
-/* 
-#F6BD60
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
 
-#F7EDE2
+ }
 
-#78E0DC
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .welcomeScreen{
+        height: 100vh;
+        width: 100vw;
+        min-height: 1000px;
+        max-height: 1050px;
+        .container{
 
-#92B4F4
+            .header{
+                height: 30vh;
+                min-height: 300px;
+                max-height: 350px;
+                width: 100%;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    max-height: 325px;
+                }
+            }
+    
+            .content{
+                height: 50vh;
+                width: 100%;
+                min-height: 400px;
+                img{
+                    max-width: 100%;
+                    min-height: 400px;    
+                }
+            }
+    
+            .button-start{
+                width: 100%;
+                height: 10vh;
+                button{
+                    font-size: 3rem;
+                }
+            }
+    
+            .button-rules{
+                width: 100%;
+                height: 10vh;
+  
+                button{
+                    max-width: 75px;
+                    max-height: 75px;
+                    width: 20%;
+                    height: 95%;
+                    margin-right: 20px;
+                    img{
+                        max-width: 90%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
 
-#474350 
-*/
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .welcomeScreen{
+        height: 100vh;
+        width: 100vw;
+        max-width: 750px;
+        min-height: 950px;
+        max-height: 1000px;
+        .container{
+            .header{
+                height: 30vh;
+                min-height: 325px;
+                max-height: 350px;
+                width: 100%;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    max-height: 350px;
+                }
+            }
+    
+            .content{
+                height: 50vh;
+                width: 100%;
+                min-height: 425px;
+                img{
+                    max-width: 100%;
+                    min-height: 425px;    
+                }
+            }
+    
+            .button-start{
+                width: 100%;
+                height: 10vh;
+                button{
+                    font-size: 3.25rem;
+                    padding: 15px;
+
+                }
+            }
+    
+            .button-rules{
+                width: 100%;
+                height: 10vh;
+  
+                button{
+                    max-width: 90px;
+                    max-height: 90px;
+                    width: 20%;
+                    height: 95%;
+                    margin-right: 0px;
+                    img{
+                        max-width: 95%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+  
+ }
+
+ @media (min-width: 2000px) { 
+    .welcomeScreen{
+        height: 100vh;
+        width: 100vw;
+        max-width: 750px;
+        min-height: 1050px;
+        max-height: 1100px;
+        .container{
+            .header{
+                height: 30vh;
+                min-height: 350px;
+                max-height: 375px;
+                width: 100%;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    max-height: 375px;
+                }
+            }
+    
+            .content{
+                height: 50vh;
+                width: 100%;
+                min-height: 450px;
+                img{
+                    max-width: 100%;
+                    min-height: 450px;    
+                }
+            }
+    
+            .button-start{
+                width: 100%;
+                height: 10vh;
+                button{
+                    font-size: 3.25rem;
+
+                }
+            }
+    
+            .button-rules{
+                width: 100%;
+                height: 10vh;
+  
+                button{
+                    max-width: 90px;
+                    max-height: 90px;
+                    width: 20%;
+                    height: 95%;
+                    margin-right: 0px;
+                    img{
+                        max-width: 95%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+ }
+
+
+
+
+ // Mobile Devices
+ @media(min-width: 568px) and (max-height: 414px){
+
+
+ }
+

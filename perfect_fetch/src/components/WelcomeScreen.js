@@ -9,30 +9,27 @@ const WelcomeScreen = (props) => {
 
     
     return(
-        <div className="WelcomeScreen-Container">
-            <h1>Welcome to </h1>
-            <img src={props.Logo} alt="logo" className="WelcomeScreen-Logo" />
-            <div className="WelcomeScreen-Content">
-                {/* <p className="WelcomeScreen-Content-Header">first time? </p>
-                <p className="WelcomeScreen-Content-Instructions">check out the how to page using the ? button</p> */}
-                <img className= "WelcomeScreen-Content-Image" src={pawPrintYellow} alt="paw print" />
-            </div>
-            <div className="WelcomeScreen-Button-Div">
-                <button 
-                    className="WelcomeScreen-Button-GetStarted"
-                    onClick={() => props.disableWelcomeScreen()}
-                    >
+        <div className='welcomeScreen'>
+            <div className="container">
+                <div className='header'>
+                    <img src={props.Logo} alt="logo" className="logo" />
+                </div>
+                <div className="content">
+                    <img className= "background-image" src={pawPrintYellow} alt="paw print" />
+                </div>
+                <div className="button-start">
+                    <button onClick={() => props.disableWelcomeScreen()}>
                         Get Started
                     </button>
-
-                <button 
-                className="WelcomeScreen-Button-Rules"
-                onClick={()=> props.enable_disableRuleScreen()}
-                >
-                   <img className="WelcomeScreen-Button-Img" src={questionMark} alt="question mark" />
-                </button>
+                </div>
+                <div className='button-rules'>
+                    <button onClick={()=> props.enable_disableRuleScreen()}>
+                        <img className="rules-img" src={questionMark} alt="question mark" />
+                    </button>
+                </div>
             </div>
         </div>
+        
     )
 }
 
