@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/WelcomeScreen.css';
+import '../styles/WelcomeScreen.scss';
 
 import questionMark from '../images/Question Mark.png';
 import pawPrintYellow from '../images/Paw Print B-04.png';

@@ -3,7 +3,7 @@ import React from 'react';
 import Image from './Image';
 import ImageInfo from './ImageInfo';
 
-import '../styles/Card.css';
+import '../styles/Card.scss';
 
 class Card extends React.Component{
 

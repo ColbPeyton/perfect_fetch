@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/PawPrints.css'
+import '../styles/PawPrints.scss'
 
 // import pawPrintBlue from '../images/Paw Print A-03.png';
 // import pawPrintRed from '../images/Paw Print B-04.png';

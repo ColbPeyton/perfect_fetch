@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/Image.css'
+import '../styles/Image.scss'
 
-import '../styles/ImageInfo.css';
+import '../styles/ImageInfo.scss';
 
 const ImageInfo = (props) =>{
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/RoundMarker.css';
+import '../styles/RoundMarker.scss';
 
 import round1 from '../images/Round 1-05.png';
 import round2 from '../images/Round 2-06.png';

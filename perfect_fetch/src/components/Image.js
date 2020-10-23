@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/Image.css'
+import '../styles/Image.scss'
 
 
-import '../styles/Image.css';
+import '../styles/Image.scss';
 
 const Image = (props) =>{
 

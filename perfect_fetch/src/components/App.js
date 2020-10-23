@@ -9,7 +9,7 @@ import RoundMaker from './RoundMarker';
 import BetweenRoundScreen from './BetweenRoundScreen';
 
 
-import '../styles/App.css';
+import '../styles/App.scss';
 import FavoriteScreen from './FavoriteScreen';
 
 import Logo from '../images/Perfect Fetch Logo-02.png';

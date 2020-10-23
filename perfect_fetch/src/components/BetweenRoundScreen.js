@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/BetweenRoundScreen.css';
+import '../styles/BetweenRoundScreen.scss';
 
 const BetweenRoundScreen = (props) => {
 

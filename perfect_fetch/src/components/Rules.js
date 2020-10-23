@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/Rules.css';
+import '../styles/Rules.scss';
 
 class Rules extends React.Component{
     

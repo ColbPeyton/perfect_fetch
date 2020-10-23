@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/FavoriteScreen.css';
+import '../styles/FavoriteScreen.scss';
 
 import Image from './Image';
 import ImageInfo from './ImageInfo';
