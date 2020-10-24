@@ -16,45 +16,31 @@ class Rules extends React.Component{
         this.setState({rulesrendered: true})
     }
 
-    componentWillReceiveProps(){
+    UNSAFE_componentWillReceiveProps(){
         this.setState({rulesrendered: false})
     }
 
-    // componentWillEnter(callback) {
-    //     this.onTransitionEnd = callback;
-    //     setTimeout(() => {
-    //       this.setState({
-    //         style: mountedStyle,
-    //       });
-    //     }, 20);
-    //   }
-  
-    //   componentWillLeave(callback) {
-    //     this.onTransitionEnd = callback;
-    //     this.setState({
-    //       style: unmountedStyle,
-    //     });
-    //   }
 
     render(){
         return(
             <div 
-                className={this.state.rulesrendered ? "Rules-Container" : "Rules-Container-Exit"}
+                className={this.state.rulesrendered ? "rules-container" : "rules-container-exit"}
                 style={this.state.style}
                 >
-                <div className="Rules-Title">
-                    <h2>Let's find the perfect dog for you</h2>
+                <div className="rules-title">
+                    <h2>Let's find your</h2>
+                    <h2>Perfect Fetch</h2>
                 </div>
-                <div className="Rules-Content">
-                    <p className="Rules-Content-Steps">Steps to success:</p>
-                    <ul className="Rules-Content-List">
+                <div className="rules-content">
+                    <p className="rules-content-steps">How This Works:</p>
+                    <ul className="rules-content-list">
                         <li>5 rounds</li>
                         <li>select 5 dogs per round</li>
                         <li>we will determine your favorite</li>
 
                         
                     </ul>
-                    <p className="Rules-li-final">All images are provided by DogAPI</p>
+                    <p className="rules-final">All images are provided by DogAPI</p>
                 </div>
                 
             </div>

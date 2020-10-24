@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 import '../styles/WelcomeScreen.scss';
 
@@ -6,6 +6,14 @@ import questionMark from '../images/Question Mark.png';
 import pawPrintYellow from '../images/Paw Print B-04.png';
 
 const WelcomeScreen = (props) => {
+
+    const [icon, setIcon] = useState(false);
+
+    function renderIcon(){
+        return icon
+        ? <i className="fas fa-times x-icon"></i>
+        : <img className="rules-img" src={questionMark} alt="question mark" />
+    }
 
     
     return(
@@ -18,13 +26,16 @@ const WelcomeScreen = (props) => {
                     <img className= "background-image" src={pawPrintYellow} alt="paw print" />
                 </div>
                 <div className="button-start">
-                    <button onClick={() => props.disableWelcomeScreen()}>
+                    <button onClick={() => props.disableWelcomeScreen() }>
                         Get Started
                     </button>
                 </div>
                 <div className='button-rules'>
-                    <button onClick={()=> props.enable_disableRuleScreen()}>
-                        <img className="rules-img" src={questionMark} alt="question mark" />
+                    <button onClick={()=> {
+                            props.enable_disableRuleScreen();
+                            setIcon(!icon);
+                            }}>
+                        {renderIcon()}
                     </button>
                 </div>
             </div>

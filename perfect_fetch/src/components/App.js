@@ -1,5 +1,4 @@
 import React from 'react';
-// import {CSSTransition} from 'react-transition-group';
 
 import Card from './Card';
 import PawPrints from './PawPrints';
@@ -192,7 +191,7 @@ class App extends React.Component{
         if(this.state.welcomeScreenRendered){
             return(
                 <div className="App-WelcomeScreen">
-                    <WelcomeScreen Logo={Logo} disableWelcomeScreen={this.disableWelcomeScreen} enable_disableRuleScreen={this.enable_disableRuleScreen}/>
+                    <WelcomeScreen Logo={Logo} disableWelcomeScreen={this.disableWelcomeScreen} enable_disableRuleScreen={this.enable_disableRuleScreen} rulesRendered={this.rulesRendered}/>
                 </div>
             )
         }
