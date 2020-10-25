@@ -34,13 +34,11 @@ class Rules extends React.Component{
                 <div className="rules-content">
                     <p className="rules-content-steps">How This Works:</p>
                     <ul className="rules-content-list">
-                        <li>5 rounds</li>
-                        <li>select 5 dogs per round</li>
-                        <li>we will determine your favorite</li>
+                        <li>Select 5 of your favorite dogs each round.</li>
+                        <li>We will use your choices to determine your <span>Perfect Fetch</span>!</li>
 
-                        
                     </ul>
-                    <p className="rules-final">All images are provided by DogAPI</p>
+                    <p className="rules-final">Images are provided by DogAPI</p>
                 </div>
                 
             </div>
