@@ -235,7 +235,7 @@ class App extends React.Component{
     renderCard = () => {
         if(this.state.currentDog && !this.state.welcomeScreenRendered && !this.state.favoriteDog){
             return(
-                <div className="App-Child-Div">
+                <div className="card-container">
                     <Card 
                         increasePawPrints={this.increasePawPrints} 
                         didNotLikeDog={this.didNotLikeDog}
@@ -243,7 +243,6 @@ class App extends React.Component{
                         currentDog={this.state.currentDog}
                         />
                     <PawPrints numPawPrints={this.state.numPawPrints}/>
-                    
                 </div>
             )
         }
@@ -252,16 +251,16 @@ class App extends React.Component{
     renderButtons = () => {
         if(this.state.currentDog && !this.state.welcomeScreenRendered && !this.state.favoriteDog){
             return(
-                <div className="App-Button-Container">
+                <div className="button-container">
                 <button 
-                    className="App-Button App-Button-Left"
+                    className="app-button button-left"
                     onClick={this.didNotLikeDog}
                     disabled={this.state.isButtonDisabled}
                     >
                     <i className="far fa-times-circle fa-3x"></i>
                 </button>
                 <button 
-                    className="App-Button App-Button-Right"
+                    className="app-button button-right"
                     onClick={this.updateRoundAndImage}
                     disabled={this.state.isButtonDisabled}
                     >
@@ -314,8 +313,8 @@ class App extends React.Component{
     renderLogo = () =>{
         if(!this.state.welcomeScreenRendered ){
             return(
-                <div className="App-Div-Logo">
-                    <img className="App-Logo" src={Logo} alt="logo" />
+                <div className="logo-container">
+                    <img className="logo" src={Logo} alt="logo" />
                 </div>
             )
         }
@@ -327,7 +326,7 @@ class App extends React.Component{
 
     render(){
         return(
-            <div className="App-Parent-Div">
+            <div className="app-container">
             {this.renderLogo()}
             <DelayedRules delayTime={500} isMounted={this.state.rulesRendered} />
             {this.renderWelcomeScreen()}

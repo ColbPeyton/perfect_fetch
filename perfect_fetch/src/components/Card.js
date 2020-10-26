@@ -37,12 +37,12 @@ class Card extends React.Component{
 
     render(){
         return(
-            <div className="Card-Container">
-                <div className="Card-Content">
-                    <div className="Card-Content-Image">
+            <div className="card-container">
+                <div className="card-content">
+                    <div className="card-image">
                         <Image currentDog={this.props.currentDog} />
                     </div>
-                    <div className="Card-Content-Info">
+                    <div className="card-info">
                         <ImageInfo currentDog ={this.props.currentDog} />
                     </div>
                 </div>

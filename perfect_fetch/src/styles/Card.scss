@@ -1,121 +1,51 @@
-.Card-Container{
+@import './colors';
+
+.card-container{
     animation-name: fade;
     animation-duration: 0.50s;
     animation-fill-mode: forwards;
-    width: 100%;
-    height: 50vh;
-    background-color: #92B4F4;
-    position: relative;
-    border-radius: 15px;
-    border: 4px solid #3A506B;
-    margin: 6vh auto 0 auto;
-}
+    width: 75%;
+    height: 100%;
+    max-height: 300px;
 
-
-.Card-Content{
-    width: 100%;
-
-}
-
-.Card-Content-Image{
-    margin-bottom: 0;
-    width: 275px;
-    height: 325px;
-
-}
-
-.Card-Content-Info{
-    border-top: 5px solid #3A506B;
-    background-color: #F6BD60;
-    width: 100%;
-    height: 9vh;
-    border-bottom-right-radius: 9px;
-    border-bottom-left-radius: 9px;
-}
-
-.Card-Button-Container{
-    margin: 0 auto;
-    margin-top: 4px;
-    display: flex;
-    justify-content: space-evenly;
-    width: 95%;
-}
-
-/* @media only screen and (max-width: 600px) , (max-height: 700) {
-    .Card-Container{
-        width: 100%;
-        height: 50vh;
-        background-color: #92B4F4;
-        position: relative;
+    .card-content{
+        width: 75%;
+        height: 100%;
+        max-height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color:$primary-blue;
+        border: 4px solid $border-color;
         border-radius: 15px;
-        border: 4px solid #3A506B;
-        margin: 8vh auto 0 auto;
-    }
 
-    .Card-Content-Image{
-        margin-bottom: 0;
-        width: 250px;
-        height: 300px;
-    
-    }
 
-    .Card-Content-Info{
-        border-top: 5px solid #3A506B;
-        background-color: #F7AEF8;
-        width: 100%;
-        height: 9vh;
-        border-bottom-right-radius: 9px;
-        border-bottom-left-radius: 9px;
+        .card-image{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-info{
+            border-top: 5px solid $border-color;
+            background-color: #F6BD60;
+            width: 100%;
+            height: 25%;
+            border-bottom-right-radius: 9px;
+            border-bottom-left-radius: 9px;
+        }
+        
     }
-    
-    
-} */
+}
+
+
+
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .Card-Container{
-        animation-name: fade;
-        animation-duration: 0.50s;
-        animation-fill-mode: forwards;
-        width: 100%;
-        height: 50vh;
-        background-color: #92B4F4;
-        position: relative;
-        border-radius: 15px;
-        border: 4px solid #3A506B;
-        margin: 7vh auto 0 auto;
-    }
-    
-    
-    .Card-Content{
-        width: 100%;
-    
-    }
-    
-    .Card-Content-Image{
-        margin-bottom: 0;
-        width: 275px;
-        height: 325px;
-    
-    }
-    
-    .Card-Content-Info{
-        border-top: 5px solid #3A506B;
-        background-color: #F6BD60;
-        width: 100%;
-        height: 9vh;
-        border-bottom-right-radius: 9px;
-        border-bottom-left-radius: 9px;
-    }
-    
-    .Card-Button-Container{
-        margin: 0 auto;
-        margin-top: 4px;
-        display: flex;
-        justify-content: space-evenly;
-        width: 95%;
-    }
-}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {

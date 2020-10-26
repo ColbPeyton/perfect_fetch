@@ -12,97 +12,66 @@
         border: none;
     }
 }
-.App-Parent-Div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.app-container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    max-height: 575px;
+
+    .logo-container{
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-container{
+        overflow: hidden;
+        height: 60vh;
+        max-height: 325px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .button-container{
+        margin: 0 auto;
+        justify-self: flex-end;
+        height: 20vh;
+        max-height: 75px;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .app-button{
+            width: 50%;
+            height: 75%;
+            max-height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+           &.button-left{
+                border-top: 2px solid $font-color;
+                background-color: $primary-blue;
+
+            }
+            &.button-right{
+                background-color: $primary-yellow;
+            }
+        }
+    }
 }
 
-.App-Child-Div{
-    margin-top: 15vh;
-    animation-name: fade;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
 
-.App-Child-Div-Left{
-    animation-name: slideLeft;
-    animation-duration: 0.50s;
-    animation-fill-mode: forwards;
-}
-
-.App-Child-Div-Right{
-    animation-name: slideRight;
-    animation-duration: 0.50s;
-    animation-fill-mode: forwards;
-}
-
-.App-Button-Container{
-    animation-name: fade;
-    animation-duration: 0.50s;
-    animation-fill-mode: forwards;
-    margin: 0 auto;
-    margin-top: 4px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-.App-Button{
-    width: 50%;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    color: #474350;
-
-}
-
-.App-Button-Left{
-    color: #474350;
-    background-color: #F6BD60;
-    border-top-left-radius: 10px;
-    border: #3A506B solid 3.25px;
-    border-bottom: none;
-    border-right: none;
-    cursor: pointer;
-    padding: 6px;
-
-}
-.App-Button-Right{
-    color: #474350;
-    background-color: #92B4F4;
-    border-top-right-radius: 10px;
-    border: #3A506B solid 3.25px;
-    border-bottom: none;
-    border-left: none;
-    cursor: pointer;
-    padding: 6px;
-
-}
-
-button:focus { outline:0 !important; }
-
-button:disabled{
-    color: #474350;
-}
-
-.App-Div-Logo{
-    
-}
-
-.App-Logo{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: auto;
-    margin-bottom: 10%;
-    width: 85%;
-    animation-name: fade;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
 
 /* @media only screen and (max-width: 600px) , (max-height: 700) {
     .App-Child-Div{
