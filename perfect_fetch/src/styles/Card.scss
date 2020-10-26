@@ -6,10 +6,10 @@
     animation-fill-mode: forwards;
     width: 75%;
     height: 100%;
-    max-height: 300px;
+    max-height: 275px;
 
     .card-content{
-        width: 75%;
+        width: 60%;
         height: 100%;
         max-height: 250px;
         display: flex;
@@ -27,6 +27,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+
         }
 
         .card-info{
@@ -61,17 +63,6 @@
             .card-image{
                 height: 100%;
                 width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
             }
             
         }
@@ -81,29 +72,9 @@
 }
 @media screen and (min-width: 480px){
     .card-container{
-        width: 75%;
-        height: 100%;
-    
         .card-content{
             width: 60%;
-            height: 100%;
             max-height: 325px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
-            }
             
         }
     }
@@ -113,28 +84,9 @@
 @media (min-width: 576px) { 
     .card-container{
         width: 50%;
-        height: 100%;
-    
         .card-content{
             width: 40%;
-            height: 100%;
             max-height: 350px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
-            }
             
         }
     }
@@ -144,29 +96,9 @@
 @media (min-width: 768px) { 
     .card-container{
         width: 75%;
-        height: 100%;
-    
         .card-content{
             width: 35%;
-            height: 100%;
-            max-height: 400px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
-            }
-            
+            max-height: 400px;       
         }
     }
 }
@@ -176,24 +108,7 @@
     .card-container{
         .card-content{
             width: 50%;
-            height: 100%;
-            max-height: 500px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
-            }
+            max-height: 500px;       
             
         }
     }
@@ -206,19 +121,6 @@
             width: 50%;
             height: 100%;
             max-height: 475px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
-            }
-            
         }
     }
  }
@@ -227,25 +129,7 @@
     .card-container{
         .card-content{
             width: 45%;
-            height: 100%;
             max-height: 500px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
-            }
-            
         }
     }
  }
@@ -257,24 +141,10 @@
  @media(max-width: 813px) and (max-height: 415px){
     .card-container{
         .card-content{
-            width: 20%;
-            height: 100%;
+            width: 25%;
             max-height: 200px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
+
             .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -289,28 +159,7 @@
     .card-container{
         .card-content{
             width: 20%;
-            height: 100%;
             max-height: 150px;    
-    
-            .card-image{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-    
-            .card-info{
-                border-top: 5px solid $border-color;
-                background-color: #F6BD60;
-                width: 100%;
-                height: 25%;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-            }
-            
         }
     }
 

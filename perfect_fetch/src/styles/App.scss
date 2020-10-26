@@ -41,7 +41,7 @@
     .card-container{
         overflow: hidden;
         height: 60vh;
-        max-height: 325px;
+        max-height: 350px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -88,96 +88,43 @@
 
 @media screen and (min-width: 375px){
     .app-container{
-        height: 100vh;
-        width: 100vw;
         overflow: hidden;
         max-height: 812px;
     }
     .play-container{
-        width: 100%;
-        height: 100%;
         max-height: 812px;
 
-        .logo-container{
-            height: 30vh;
-            width: 100%;
-            .logo{
-                max-width: 100%;
-                height: auto;
-            }
-        }
-    
         .card-container{
-            overflow: hidden;
-            height: 60vh;
             min-height: 325px;
             max-height: 400px;
-            width: 100%;
         }
     
         .button-container{
-            margin: 0 auto;
-            justify-self: flex-end;
-            height: 20vh;
-            max-height: 75px;
-            width: 95%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
             position: absolute;
             bottom: 0;
-    
-            .app-button{
-                width: 50%;
-                height: 75%;
-                max-height: 75px;
-            }
         }
     }
 
 }
 @media screen and (min-width: 480px){
     .app-container{
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-        max-height: 800px;
+        min-height: 700px;
+        max-height: 900px;
     }
     .play-container{
-        width: 100%;
-        height: 100%;
-        max-height: 800px;
-
+        min-height: 700px;
+        max-height: 900px;
         .logo-container{
-            height: 30vh;
-            width: 100%;
             max-height: 300px;
-
-            .logo{
-                max-width: 100%;
-                height: auto;
-            }
         }
     
         .card-container{
-            overflow: hidden;
-            height: 60vh;
             min-height: 375px;
             max-height: 450px;
-            width: 100%;
         }
     
         .button-container{
-
-            height: 20vh;
-            max-height: 75px;
             width: 85%;
-    
-             .app-button{
-                width: 50%;
-                height: 75%;
-                max-height: 75px;
-            }
         }
     }
 }
@@ -190,50 +137,30 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
     .app-container{
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
         min-height: 1000px;
         max-height: 1050px;
     }
     .play-container{
-        width: 100%;
-        height: 100%;
         min-height: 1000px;
         max-height: 1050px;
 
         .logo-container{
-            height: 30vh;
-            width: 100%;
             min-height: 300px;
             max-height: 350px;
 
             .logo{
-                max-width: 100%;
                 max-height: 325px;
-                height: auto;
             }
         }
     
         .card-container{
-            overflow: hidden;
-            height: 60vh;
             min-height: 450px;
             max-height: 550px;
-            width: 100%;
         }
     
         .button-container{
-
-            height: 20vh;
             max-height: 75px;
             width: 85%;
-    
-             .app-button{
-                width: 50%;
-                height: 75%;
-                max-height: 75px;
-            }
         }
     }
 }
@@ -241,53 +168,36 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
     .app-container{
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
+        margin: 0 auto;
+
         max-width: 750px;
         min-height: 1000px;
         max-height: 1050px;
     }
     .play-container{
         margin: 0 auto;
-        width: 100%;
-        height: 100%;
         max-width: 750px;
         min-height: 1000px;
         max-height: 1050px;
 
         .logo-container{
-            height: 30vh;
-            width: 100%;
             min-height: 325px;
             max-height: 350px;
 
             .logo{
-                max-width: 100%;
                 max-height: 350px;
-                height: auto;
             }
         }
     
         .card-container{
-            overflow: hidden;
-            height: 60vh;
             min-height: 550px;
             max-height: 650px;
-            width: 100%;
         }
     
         .button-container{
-
-            height: 20vh;
             max-height: 100px;
             width: 60%;
-    
              .app-button{
-                width: 50%;
-                height: 75%;
-                max-height: 75px;
-
                 i{
                     font-size: 3.5rem;
                 }
@@ -299,114 +209,61 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
     .app-container{
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
         max-width: 750px;
-        min-height: 950px;
-        max-height: 1000px;
+        min-height: 975px;
+        max-height: 1050px;
     }
     .play-container{
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
         max-width: 750px;
-        min-height: 950px;
-        max-height: 1000px;
+        min-height: 975px;
+        max-height: 1050px;
 
         .logo-container{
-            height: 30vh;
-            width: 100%;
             min-height: 325px;
             max-height: 350px;
 
             .logo{
-                max-width: 100%;
                 max-height: 350px;
-                height: auto;
             }
         }
     
         .card-container{
-            overflow: hidden;
-            height: 60vh;
             min-height: 475px;
             max-height: 575px;
             width: 100%;
         }
     
         .button-container{
-
-            height: 20vh;
-            max-height: 100px;
             width: 40%;
-    
-             .app-button{
-                width: 50%;
-                height: 75%;
-                max-height: 75px;
-
-                i{
-                    font-size: 3.5rem;
-                }
-            }
         }
     }
  }
 
  @media (min-width: 2000px) { 
     .app-container{
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-        max-width: 750px;
         min-height: 1050px;
         max-height: 1100px;
     }
     .play-container{
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        max-width: 750px;
         min-height: 1050px;
         max-height: 1100px;
 
         .logo-container{
-            height: 30vh;
-            width: 100%;
             min-height: 350px;
             max-height: 375px;
 
             .logo{
-                max-width: 100%;
                 max-height: 375px;
-                height: auto;
             }
         }
     
         .card-container{
-            overflow: hidden;
-            height: 60vh;
             min-height: 550px;
             max-height: 650px;
-            width: 100%;
         }
     
         .button-container{
-
-            height: 20vh;
-            max-height: 100px;
             width: 35%;
-    
-             .app-button{
-                width: 50%;
-                height: 75%;
-                max-height: 75px;
-
-                i{
-                    font-size: 3.5rem;
-                }
-            }
         }
     }
  }
@@ -424,20 +281,14 @@
         overflow: auto;
     }
     .play-container{
-        width: 100%;
-        height: 100%;
         max-height: 450px;
         min-height: 300px;
         overflow: auto;
 
         .logo-container{
-            height: 30vh;
-            width: 100%;
             max-height: 75px;
             min-height: 50px;
             .logo{
-                max-width: 100%;
-                height: auto;
                 max-height: 75px;
 
             }
@@ -446,8 +297,8 @@
         .card-container{
             overflow: auto;
             height: 100vh;
-            min-height: 250px;
-            max-height: 275px;
+            min-height: 225px;
+            max-height: 250px;
             width: 100%;
         }
     

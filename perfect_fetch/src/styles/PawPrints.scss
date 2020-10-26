@@ -54,8 +54,6 @@
 }
 @media screen and (min-width: 480px){
     .pawPrints-container{
-        height: 100%;
-        width: 100%;
         border-radius: 5px;
         padding: 5px;
     }
@@ -64,7 +62,6 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
     .pawPrints-container{
-        height: 100%;
         width: 50vw;
         max-width: 600px;
         .paw{

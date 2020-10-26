@@ -151,8 +151,6 @@
     }
     
     .rules-title{
-        height: 20vh;
-        width: 95%;
         max-height: 165px;
         h2{
             font-size: 3rem;
@@ -161,14 +159,11 @@
     
     
     .rules-content{
-        width: 100%;
-        height: 70%;
-        max-height: 367px;
+        max-height: 375px;
     }
     
     .rules-content-steps{
-        height: 10vh;
-        width: 100%;
+
         font-size: 2.5rem;
         max-height: 70px;
     }
@@ -179,7 +174,7 @@
         font-size: 1.75rem;
         li{
             span{
-                font-size: 1.6rem;
+                font-size: 1.76rem;
             }
         }
     
@@ -192,21 +187,18 @@
 @media screen and (min-width: 480px){
     .rules-container{
         width: 90%;
-        height: 90vh;
         max-height: 575px;
         max-width: 425px;
     }
     
     .rules-container-exit{
         width: 90%;
-        height: 90vh;
         max-height: 575px;
         max-width: 425px;
     }
     
     .rules-title{
         height: 25vh;
-        width: 95%;
         max-height: 165px;
         h2{
             font-size: 3.5rem;
@@ -215,14 +207,10 @@
     
     
     .rules-content{
-        width: 100%;
-        height: 70%;
         max-height: 450px;
     }
     
     .rules-content-steps{
-        height: 10vh;
-        width: 100%;
         font-size: 2.75rem;
         max-height: 75px;
     }
@@ -240,52 +228,36 @@
     }
     
     .rules-final{
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
-    
-
- }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
     .rules-container{
-        width: 90%;
-        height: 90vh;
         max-height: 625px;
         max-width: 500px;
     }
     
     .rules-container-exit{
-        width: 100%;
-        height: 90vh;
         max-height: 625px;
         max-width: 500px;
     }
     
     .rules-title{
-        height: 25vh;
-        width: 95%;
-        max-height: 165px;
         h2{
-            font-size: 3.75rem;
+            font-size: 3.7rem;
         }    
     }
     
     
     .rules-content{
-        width: 100%;
-        height: 70%;
         min-height: 440px;
         max-height: 475px;
     }
     
     .rules-content-steps{
-        height: 10vh;
-        width: 100%;
         font-size: 3rem;
         max-height: 80px;
     }
@@ -303,7 +275,7 @@
     }
     
     .rules-final{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -320,8 +292,6 @@
     }
     
     .rules-title{
-        height: 25vh;
-        width: 95%;
         max-height: 200px;
         h2{
             font-size: 4.5rem;
@@ -330,15 +300,11 @@
     
     
     .rules-content{
-        width: 100%;
-        height: 70%;
         min-height: 440px;
         max-height: 475px;
     }
     
     .rules-content-steps{
-        height: 10vh;
-        width: 100%;
         font-size: 3.25rem;
         max-height: 90px;
     }
@@ -373,30 +339,17 @@
     }
     
     .rules-title{
-        height: 25vh;
         h2{
             font-size: 4.75rem;
         }    
     }
     
-    
     .rules-content{
-        width: 100%;
-        height: 70%;
         min-height: 450px;
         max-height: 500px;
     }
     
-    .rules-content-steps{
-        height: 10vh;
-        width: 100%;
-        font-size: 3.25rem;
-        max-height: 90px;
-    }
-    
     .rules-content-list{
-        width: 90%;
-        height: 65%;
         font-size: 2.75rem;
         li{
             span{
@@ -425,7 +378,6 @@
     }
     
     .rules-title{
-        height: 25vh;
         h2{
             font-size: 4.8rem;
         }    
@@ -433,33 +385,13 @@
     
     
     .rules-content{
-        width: 100%;
-        height: 70%;
         min-height: 475px;
         max-height: 525px;
     }
     
     .rules-content-steps{
-        height: 10vh;
-        width: 100%;
         font-size: 3.5rem;
         max-height: 100px;
-    }
-    
-    .rules-content-list{
-        width: 90%;
-        height: 65%;
-        font-size: 2.75rem;
-        li{
-            span{
-                font-size: 2.76rem;
-            }
-        }
-    
-    }
-    
-    .rules-final{
-        font-size: 1.6rem;
     }
  }
 
