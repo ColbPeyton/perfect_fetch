@@ -111,7 +111,33 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
-
+    .card-container{
+        width: 50%;
+        height: 100%;
+    
+        .card-content{
+            width: 40%;
+            height: 100%;
+            max-height: 350px;    
+    
+            .card-image{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+    
+            .card-info{
+                border-top: 5px solid $border-color;
+                background-color: #F6BD60;
+                width: 100%;
+                height: 25%;
+            }
+            
+        }
+    }
  }
 
 // Medium devices (tablets, 768px and up)
@@ -121,9 +147,9 @@
         height: 100%;
     
         .card-content{
-            width: 40%;
+            width: 35%;
             height: 100%;
-            max-height: 375px;    
+            max-height: 400px;    
     
             .card-image{
                 height: 100%;
