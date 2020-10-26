@@ -6,7 +6,7 @@
     animation-fill-mode: forwards;
     position: absolute;
     z-index: 10;
-    width: 100%;
+    width: 95%;
     height: 90vh;
     max-height: 450px;
     top: 0;
@@ -45,8 +45,8 @@
 .rules-title{
     overflow: hidden;
 
-    height: 25vh;
-    width: 100%;
+    height: 20vh;
+    width: 95%;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -55,7 +55,7 @@
     flex-direction: column;
 
     h2{
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #fff;
 
     }    
@@ -151,11 +151,11 @@
     }
     
     .rules-title{
-        height: 25vh;
+        height: 20vh;
         width: 95%;
         max-height: 165px;
         h2{
-            font-size: 3.25rem;
+            font-size: 3rem;
         }    
     }
     

@@ -1,73 +1,113 @@
+@import './colors';
 
-.PawPrints-Container{
+.pawPrints-container{
     animation-name: fade;
     animation-duration: 0.50s;
     animation-fill-mode: forwards;
+    height: 100%;
     width: 100%;
-    margin-top: 5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(43, 45, 66, 0.733);
-    border: #3A506B solid 2px;
+    background-color: rgba(43, 45, 66, 0.644);
+    border: $border-color solid 2px;
     border-radius: 5px;
-    height: 7vh;
-}
+    padding: 2px;
 
-.PawPrints-Icons-Blue{
-    color: #80A1D4;
-}
-
-.PawPrints-Icons-Blue-Outline{
-    color: rgba(128, 162, 212, 0.5);
-}
-
-.PawPrints-Icons-Red{
-    color: #FFA500;
-    
-}
-
-.PawPrints-Icons-Red-Outline{
-    color: rgba(255, 166, 0, 0.5);
-}
-
-
-/* @media only screen and (max-width: 600px) , (max-height: 750) {
-
-    .PawPrints-Container{
-        width: 100%;
-        margin-top: 30vh;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: rgba(43, 45, 66, 0.822);
-        border: #3A506B solid 2px;
-        border-radius: 5px;
-        height: 7vh;
+    .paw{
+        padding: 2px;
     }
 
-} */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+    .pawPrints-icons-primary{ 
+        i{
+            color: $primary-blue;
+        }
+    }
     
+    .pawPrints-icons-primary-outline{
+        i{
+            color: rgba(128, 162, 212, 0.5);
+        }
+    }
+    
+    .pawPrints-icons-secondary{
+        i{
+            color: $primary-yellow;
+        }
+    }
+    
+    .pawPrints-icons-secondary-outline{
+        i{
+            color: rgba(255, 166, 0, 0.5);
+        }
+    }
 }
+
+
+
+
+
+@media screen and (min-width: 375px){
+
+    
+
+}
+@media screen and (min-width: 480px){
+    .pawPrints-container{
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .pawPrints-container{
+        height: 100%;
+        width: 50vw;
+        max-width: 600px;
+        .paw{
+            i{
+                font-size:4rem;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+ 
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+  
+ }
+
+ @media (min-width: 2000px) { 
+
+ }
+
+
+
+
+ // Mobile Devices
+ @media(max-width: 813px) and (max-height: 415px){
+    .pawPrints-container{
+        height: 75%;
+        min-height: 25px;
+        width: 50vw;
+        max-width: 200px;
+        .paw{
+            i{
+                font-size:1.2rem;
+            }
+        }
+    }
+ }

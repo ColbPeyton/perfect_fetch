@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Card from './Card';
+
 import PawPrints from './PawPrints';
 import Rules from './Rules';
 import WelcomeScreen from './WelcomeScreen';
@@ -321,21 +322,28 @@ class App extends React.Component{
         return null
     }
 
+    renderCorrectScreen = () =>{
+        return this.state.welcomeScreenRendered 
+        ? <div className="app-container">
+                <DelayedRules delayTime={500} isMounted={this.state.rulesRendered} />
+                {this.renderWelcomeScreen()}
+            </div>
+        :<div className="play-container">
+            {/* {this.renderRoundMaker()} */}
+            {this.renderLogo()}
+            {this.renderCard()}
+            {this.renderButtons()}
+            {this.renderFavorite()}
+            {this.renderBetweenScreen()}
+        </div>
+    }
+
 
 
 
     render(){
         return(
-            <div className="app-container">
-            {this.renderLogo()}
-            <DelayedRules delayTime={500} isMounted={this.state.rulesRendered} />
-            {this.renderWelcomeScreen()}
-            {this.renderRoundMaker()}
-            {this.renderCard()}
-            {this.renderButtons()}
-            {this.renderFavorite()}
-            {this.renderBetweenScreen()}
-            </div>
+            this.renderCorrectScreen()
         )
     }
 }
