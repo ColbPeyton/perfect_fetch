@@ -57,7 +57,8 @@ class App extends React.Component{
         isButtonDisabled: false,
         favoriteDog: null,
         favoriteImage: null,
-        favoriteScreenRendered: false
+        favoriteScreenRendered: false,
+        totalRounds: 3
     }
 
     //generate first set of images on component load
@@ -79,9 +80,6 @@ class App extends React.Component{
 
 
     generateNewDog = () => {
-        // let randomLoc = Math.floor(Math.random() * this.state.arrOfDogImages.length);
-        // this.setState({randomDog: this.state.arrOfDogImages[randomLoc]})
-        // this.generateDogImage();
         let nextPos = this.state.currentPosInArr + 1;
         this.setState({
             currentDog: this.state.arrOfDogImages[0][this.state.currentPosInArr],
@@ -140,7 +138,7 @@ class App extends React.Component{
         let nextRound = this.state.currentRound + 1;
         this.setState({currentRound: nextRound, numPawPrints: 0, startOfNewRound: true})
 
-        if(this.state.currentRound >= 0){
+        if(this.state.currentRound >= this.state.totalRounds){
             this.setState({ favoriteScreenRendered: true})
             setTimeout(()=> {
                 this.determineFavorite();
@@ -157,9 +155,9 @@ class App extends React.Component{
         // if(this.state.dogsChosen[favorite] === 1){
         //     this.setState({currentRound: 0})
         // }
-        if(this.state.currentRound >= 0){
-        this.setState({favoriteDog: favorite});
-        this.getFavoriteImage();
+        if(this.state.currentRound >= this.state.totalRounds){
+            this.setState({favoriteDog: favorite});
+            this.getFavoriteImage();
         }
     }
 
@@ -203,7 +201,6 @@ class App extends React.Component{
             await axios.get(`https://dog.ceo/api/breed/${replaceDog}/images/random`)
             .then((response)=>{
                 this.setState({favoriteImage: response.data.message});
-                // console.log(this.state.favoriteImage)
             })
             .catch(e => {
                 console.log(e);
@@ -284,8 +281,7 @@ class App extends React.Component{
         if(this.state.startOfNewRound && !this.state.welcomeScreenRendered && !this.state.favoriteScreenRendered){
             return(
                 <div>
-                <BetweenRoundScreen />
-                <RoundMaker currentRound={this.state.currentRound}/>
+                    <RoundMaker currentRound={this.state.currentRound}/>
                 </div>
             )
         }
@@ -329,7 +325,7 @@ class App extends React.Component{
                 {this.renderWelcomeScreen()}
             </div>
         :<div className="play-container">
-            {/* {this.renderRoundMaker()} */}
+            {this.renderRoundMaker()}
             {this.renderLogo()}
             {this.renderCard()}
             {this.renderButtons()}

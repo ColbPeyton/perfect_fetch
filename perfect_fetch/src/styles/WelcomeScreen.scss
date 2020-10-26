@@ -249,8 +249,8 @@
     .welcomeScreen{
 
         max-width: 750px;
-        min-height: 950px;
-        max-height: 1000px;
+        min-height: 975px;
+        max-height: 1050px;
         .container{
             margin: 0 auto;
             .header{
@@ -262,6 +262,51 @@
             }
     
             .content{
+                min-height: 425px;
+                img{
+                    min-height: 425px;    
+                }
+            }
+    
+            .button-start{
+                button{
+                    font-size: 3.25rem;
+                    padding: 15px;
+
+                }
+            }
+    
+            .button-rules{
+
+                button{
+                    max-width: 90px;
+                    max-height: 90px;
+                    margin-right: 0px;
+                    img{
+                        max-width: 95%;
+                    }
+                }
+            }
+        }
+    }
+ }
+@media (min-width: 1200px) { 
+    .welcomeScreen{
+        max-width: 750px;
+        min-height: 975px;
+        max-height: 1050px;
+        .container{
+            margin: 0 auto;
+            .header{
+                min-height: 325px;
+                max-height: 325px;
+                img{
+                    max-height: 325px;
+                }
+            }
+    
+            .content{
+                height: 45vh;
                 min-height: 425px;
                 img{
                     min-height: 425px;    

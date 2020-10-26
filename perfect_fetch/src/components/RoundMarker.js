@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import '../styles/RoundMarker.scss';
 
@@ -10,6 +10,20 @@ import round5 from '../images/Round 5-09.png';
 
 
 const RoundMarker = (props) => {
+
+    const [active, setActive] = useState(true);
+    const [main, setMain] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setActive(false)
+        }, 2500);
+    }, []);
+    useEffect(()=>{
+        setTimeout(()=>{
+            setMain(false)
+        }, 3000);
+    }, [active]);
 
     const determineRound = ()=> {
         switch(props.currentRound){
@@ -24,12 +38,16 @@ const RoundMarker = (props) => {
             default:
                 return <img className="RoundMarker-Img" src={round5} alt="round 5" />
         }
+ 
     }
 
     return(
-        <div className="RoundMarker-Container">
-            {determineRound()}
+        <div className={`roundMarker ${main ? '' : 'not-active'}`}>
+            <div className={`RoundMarker-Container ${active ? 'active' : 'not-active'}`}>
+                {determineRound()}
+            </div>
         </div>
+
     )
 }
 
