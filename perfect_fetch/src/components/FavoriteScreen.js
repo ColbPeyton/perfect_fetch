@@ -8,24 +8,25 @@ import ImageInfo from './ImageInfo';
 const FavoriteScreen = (props) => {
     
     return(
-        <div className="FavoriteScreen-Container">
-        <h1>Your Perfect Match</h1>
-            <div className="FavoriteScreen-Content">
+        <div className="favoriteScreen-container">
+            <div className='favoriteScreen-header'>
+                <h1>Your Perfect Fetch</h1>
+            </div>
+            <div className="favoriteScreen-content">
             
-            <div className="FavortieScreen-Card-Container">
-                <div className="Card-Content">
-                    <div className="Card-Content-Image">
+            <div className="favortieScreen-card-container">
+                <div className="card-content">
+                    <div className="card-content-image">
                         <Image currentDog={props.favoriteImage} />
                     </div>
-                    <div className="Card-Content-Info">
+                    <div className="card-content-info">
                         <ImageInfo currentDog ={props.favoriteImage} />
                     </div>
                 </div>
             </div>
             </div>
-            <div className="FavoriteScreen-Button-Div">
+            <div className="favoriteScreen-button">
                 <button 
-                    className="FavoriteScreen-Button-GetStarted"
                     onClick={() => props.startOver()}
                     >
                         Try Again?
