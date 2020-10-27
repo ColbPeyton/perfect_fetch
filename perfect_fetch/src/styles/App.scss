@@ -41,7 +41,7 @@
     .card-container{
         overflow: hidden;
         height: 60vh;
-        max-height: 350px;
+        max-height: 325px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -95,8 +95,8 @@
         max-height: 812px;
 
         .card-container{
-            min-height: 325px;
-            max-height: 400px;
+            min-height: 300px;
+            max-height: 325px;
         }
     
         .button-container{
