@@ -93,9 +93,17 @@
     }
     .play-container{
         max-height: 812px;
+        .logo-container{
+            height: 25vh;
+            .logo{
+                max-width: 100%;
+                height: auto;
+                max-height: 150px;
+            }
+        }
 
         .card-container{
-            min-height: 300px;
+            min-height: 275px;
             max-height: 325px;
         }
     
@@ -115,12 +123,18 @@
         min-height: 700px;
         max-height: 900px;
         .logo-container{
+            height: 30vh;
             max-height: 300px;
+            .logo{
+                max-height: 300px;
+            }
         }
     
         .card-container{
             min-height: 375px;
             max-height: 450px;
+            margin-bottom: 0rem;
+
         }
     
         .button-container{
