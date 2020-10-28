@@ -318,8 +318,8 @@
         .card-container{
             overflow: auto;
             height: 100vh;
-            min-height: 225px;
-            max-height: 250px;
+            min-height: 210px;
+            max-height: 235px;
             width: 100%;
         }
     
@@ -328,7 +328,7 @@
             justify-self: flex-end;
             height: 20vh;
             max-height: 45px;
-            width: 50%;
+            width: 35%;
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -341,7 +341,7 @@
                 max-height: 75px;
 
                 i{
-                    font-size: 1.7rem;
+                    font-size: 1.5rem;
                 }
             }
         }
