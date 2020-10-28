@@ -58,7 +58,7 @@ class App extends React.Component{
         favoriteDog: null,
         favoriteImage: null,
         favoriteScreenRendered: false,
-        totalRounds: 3
+        totalRounds: 2
     }
 
     //generate first set of images on component load
